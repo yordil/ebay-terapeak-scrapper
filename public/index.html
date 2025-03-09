@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Terapeak Item Picker</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-buttons">
+				<button id="updateCookieButton" class="header-button">
+					Update Active User
+				</button>
+				<button id="checkStatusButton" class="header-button">
+					Check Active User
+				</button>
+			</div>
+		</header>
+		<div class="container">
+			<form id="dataForm" class="form-container">
+				<div class="form-header">
+					<h1>Terapeak Item Picker</h1>
+				</div>
+
+				<div class="form-group">
+					<label for="searchUrl">Search Terapeak URL</label>
+					<div class="input-wrapper">
+						<input
+							type="text"
+							id="searchUrl"
+							name="searchUrl"
+							placeholder="Enter search URL"
+							required
+						/>
+						<div class="input-status"></div>
+					</div>
+					<span class="error-message"></span>
+				</div>
+
+				<div class="form-group">
+					<label for="baseUrl">Base Terapeak URL</label>
+					<div class="input-wrapper">
+						<input
+							type="text"
+							id="baseUrl"
+							name="baseUrl"
+							placeholder="Enter base URL"
+							required
+						/>
+						<div class="input-status"></div>
+					</div>
+					<span class="error-message"></span>
+				</div>
+
+				<div class="form-group" style="margin-left: 10px;">
+					<span style="display: flex; align-items: center;">
+
+						<input type="checkbox" id="aiHelper" name="aiHelper" style="transform: scale(1.5); margin-right: 10px;" />
+						<label for="aiHelper" style="font-size: 16px">AI Helper</label>
+					</span>
+				</div>
+
+				<div class="form-group">
+					<label for="itemSpecific">Item Specific</label>
+					<div class="input-wrapper">
+						<input
+							type="text"
+							id="itemSpecific"
+							name="itemSpecific"
+							placeholder="Enter item specific"
+							required
+						/>
+						<div class="input-status"></div>
+					</div>
+					<span class="error-message"></span>
+				</div>
+				
+				<div class="form-group">
+					<label for="baseMURL">Base MURL</label>
+					<div class="input-wrapper">
+						<input
+							type="text"
+							id="baseMURL"
+							name="baseMURL"
+							placeholder="Enter Base MURL"
+							required
+						/>
+						<div class="input-status"></div>
+					</div>
+					<span class="error-message"></span>
+				</div>
+				<div class="form-group">
+					<label for="baseYURL">Base YURL</label>
+					<div class="input-wrapper">
+						<input
+							type="text"
+							id="baseYURL"
+							name="baseYURL"
+							placeholder="Enter Base YURL"
+							required
+						/>
+						<div class="input-status"></div>
+					</div>
+					<span class="error-message"></span>
+				</div>
+				
+
+
+				<div class="form-group">
+					<label for="email">Email</label>
+					<div class="input-wrapper">
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="your@email.com"
+							required
+						/>
+						<div class="input-status"></div>
+					</div>
+					<span class="error-message"></span>
+				</div>
+
+				<div class="form-group">
+					<label for="blacklist">Blacklist (CSV)</label>
+					<div class="file-input-container" id="dropZone">
+						<input
+							type="file"
+							id="blacklist"
+							name="blacklist"
+							accept=".csv"
+							required
+						/>
+						<div class="file-input-content">
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+								<polyline points="17 8 12 3 7 8" />
+								<line x1="12" y1="3" x2="12" y2="15" />
+							</svg>
+							<span class="file-name"
+								>Drag & drop your CSV file or click to browse</span
+							>
+						</div>
+					</div>
+					<span class="error-message"></span>
+				</div>
+
+				<button type="submit">
+					<span class="button-text">Submit</span>
+					<div class="button-loader"></div>
+				</button>
+			</form>
+
+			<div id="toast" class="toast"></div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
